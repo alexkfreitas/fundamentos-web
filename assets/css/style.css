@@ -2,8 +2,15 @@
 Estilos da página index.html
 */
 
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Bangers&display=swap%27');
+
+
 .center{
     text-align: center;
+}
+
+.justify{
+    text-align: justify;
 }
 
 .container{
@@ -17,6 +24,9 @@ Estilos da página index.html
     display: inline;
     padding: 10px;
     text-decoration: none;
+    font-family: 'Bangers', cursive;
+    margin-bottom: .750rem;
+    font-size: 20px;
 }
 
 #menu li a{
@@ -25,7 +35,9 @@ Estilos da página index.html
 }
 
 #menu li a:hover{
-    color:gray;
+    color:darkblue;
+    font-family: 'Bangers', cursive;
+    margin-bottom: .750rem;
 }
 
 .p-30{
@@ -50,8 +62,27 @@ Estilos da página index.html
     margin-bottom: 50px;
 }
 
+/* .container img:hover{
+    width: 60px;
+    height: 60px;
+} */
+
+.imagem{
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.imagem:hover{
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
 
 
 /* 
 Estilos da página contato.html
 */
+
+.ml-50{
+    margin-left: 50px;
+}
