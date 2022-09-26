@@ -4,7 +4,6 @@ Estilos da página index.html
 
 @import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Bangers&display=swap%27');
 
-
 .center{
     text-align: center;
 }
@@ -32,6 +31,12 @@ Estilos da página index.html
 #menu li a{
     text-decoration: none;
     color:black;
+    text-transform: uppercase;
+    padding: 1px 20px;
+    border: 2px solid #5fe36a;
+
+    position:relative
+
 }
 
 #menu li a:hover{
@@ -54,8 +59,8 @@ Estilos da página index.html
 }
 
 .tm-social{
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
 }
 
 .mb-50{
@@ -79,10 +84,15 @@ Estilos da página index.html
 
 
 
+
 /* 
 Estilos da página contato.html
 */
 
 .ml-50{
     margin-left: 50px;
+}
+
+hr{
+    border: red
 }

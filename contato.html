@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,46 +8,65 @@
     <title>Contato</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
-    <ul id="menu"> <!--Define uma lista não ordenada-->
-        <li> <!--Dedine uma lista-->
-            <a href="index.html"> Home </a> <!--Define um hiperlink-->
+    <ul id="menu">
+        <!--Define uma lista não ordenada-->
+        <li>
+            <!--Dedine uma lista-->
+            <a href="index.html"> Home </a>
+            <!--Define um hiperlink-->
         </li>
         <li>
             <a href="contato.html"> Contato </a>
         </li>
     </ul>
- <!--Define o corpo do documento-->
+    <!--Define o corpo do documento-->
 
-    <h1 class="center">Entre em contato comigo</h1> <!--Define cabeçalhos html-->
+    <h1 class="center">Entre em contato comigo</h1>
+    <!--Define cabeçalhos html-->
 
     <div class="container">
         <div>
-            
-        <form> <!--Define um formulário html para entrada do usuário-->
-            <label for="nome">Nome:</label><br>  <!--Define um rótulo para input-->
-            <input type="text" id="nome"><br> <!--Define um controle de entrada-->
-            
-            
-            <label for="email">E-mail:</label>  <br>
-            <input type="email" id="email"><br>
-            
-            
-            <label for="assunto">Assunto:</label> <br>
-            <textarea name="assunto" id="assunto" cols="60" rows="5"></textarea><br> <!--Define um controle de entrada mutilinha (área de texto)-->
-            
-            
-            <button>Enviar</button> <!--Define um botão clicável-->
-        </form>
+
+            <form>
+                <!--Define um formulário html para entrada do usuário-->
+                <label for="nome">Nome:</label><br>
+                <!--Define um rótulo para input-->
+                <input type="text" id="nome" onkeyup='validaNome()'><br>
+                <!--Define um controle de entrada-->
+                <div id="txtNome"></div>
+
+
+                <label for="email">E-mail:</label> <br>
+                <input type="email" id="email" onkeyup="validaEmail()"><br>
+                <div id="txtEmail"></div>
+
+
+                <label for="assunto">Assunto:</label> <br>
+                <textarea name="assunto" id="assunto" cols="60" rows="5" onkeyup="validaAssunto()"></textarea><br>
+                <!--Define um controle de entrada mutilinha (área de texto)-->
+                <div id="txtAssunto"></div>
+
+
+                <button onclick="enviar()">Enviar</button>
+                <!--Define um botão clicável-->
+            </form>
         </div>
-    
+
+
+
 
         <div class="ml-50">
-            
-            <p>Rua Onze de Fevereiro, 27</p> <!--Define um parágrafo-->
+
+            <p>Rua Onze de Fevereiro, 27</p>
+            <!--Define um parágrafo-->
             <p>Cidade Vargas, São Paulo - SP</p>
             <!--Define um quadro embutido-->
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.8553195352442!2d-46.64149938442204!3d-23.64535187058577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5add7eb55f99%3A0xf5a2d5ef6cd7391b!2sR.%20Onze%20de%20Fevereiro%2C%2027%20-%20Jabaquara%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2004319-020!5e0!3m2!1sen!2sbr!4v1663947739087!5m2!1sen!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.8553195352442!2d-46.64149938442204!3d-23.64535187058577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5add7eb55f99%3A0xf5a2d5ef6cd7391b!2sR.%20Onze%20de%20Fevereiro%2C%2027%20-%20Jabaquara%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2004319-020!5e0!3m2!1sen!2sbr!4v1663947739087!5m2!1sen!2sbr"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" onmousemove="mapaZoom()" onmouseout="mapaNormal()" id="mapa"></iframe>
 
         </div>
     </div>
@@ -56,25 +76,27 @@
 
         <div class="container">
             <a href="https://www.linkedin.com/in/alex-katanosaka-freitas-237123199/" target="_blank">
-            <img class="imagem tm-social p-30" src="assets/img/linkedin.png" alt="Logo do Linkedin">
+                <img class="imagem tm-social p-30" src="assets/img/linkedin.png" alt="Logo do Linkedin">
             </a>
             <a href="https://www.github.com/alexkfreitas" target="_blank">
                 <img class="imagem tm-social p-30" src="assets/img/github.png" alt="Logo do Github">
             </a>
             <a href="https://www.instagram.com/alexkatanosaka/?hl=en" target="_blank">
-            <img class="imagem tm-social p-30" src="assets/img/instagram.png" alt="Logo do Instagram">
+                <img class="imagem tm-social p-30" src="assets/img/instagram.png" alt="Logo do Instagram">
             </a>
-            <a href="https://api.whatsapp.com/send?phone=5511952414203&text=Ol%C3%A1%2C%20Alex!%20Vim%20pelo%20seu%20portf%C3%B3lio!" target="_blank">
-            <img class="imagem tm-social p-30" src="assets/img/whatsapp.png" alt="Logo do Whatsapp">
+            <a href="https://api.whatsapp.com/send?phone=5511952414203&text=Ol%C3%A1%2C%20Alex!%20Vim%20pelo%20seu%20portf%C3%B3lio!"
+                target="_blank">
+                <img class="imagem tm-social p-30" src="assets/img/whatsapp.png" alt="Logo do Whatsapp">
             </a>
 
         </div>
         <p class="center">
             Todos os direitos reservados: Alex Katanosaka Freitas &copy
         </p>
-        
+
     </footer>
 
-        
+    <script src="assets/scripts/script.js"></script>
 </body>
+
 </html>
